@@ -80,11 +80,15 @@ namespace Lab2_VM
         /// <param name="matrix">Матрица</param>
         /// <param name="index1">Индекс первой строки</param>
         /// <param name="index2">Индекс второй строки</param>
-        static void SwapString(decimal[,] matrix, int index1, int index2)
+        public static void SwapString(decimal[,] matrix, int index1, int index2)
         {
             if (index1 == index2) return;
             for (int i = 0; i < matrix.GetLength(1); i++)
-                (matrix[index1, i], matrix[index2, i]) = (matrix[index2, i], matrix[index1, i]);
+            {
+                var pool = matrix[index1, i];
+                matrix[index1, i] = matrix[index2, i];
+                matrix[index2, i] = pool;
+            }
         }
 
         /// <summary>
@@ -130,7 +134,6 @@ namespace Lab2_VM
 
         public static decimal Abs(decimal value) => value > 0 ? value : -value;
 
-
         /// <summary>
         /// Вычисляет значения корней СЛАУ по методу Зейделя
         /// </summary>
@@ -139,7 +142,6 @@ namespace Lab2_VM
         {
             var strCount = matrix.GetLength(0);
             var columnCount = matrix.GetLength(1);
-
 
             if (strCount + 1 != columnCount) throw new IncorrectMatrixException();
 
@@ -160,7 +162,9 @@ namespace Lab2_VM
 
             do
             {
-                (lastResArray, resArray) = (resArray, lastResArray);
+                var pool = lastResArray;
+                lastResArray = resArray;
+                resArray = pool;
 
                 for (var i = 0; i < strCount; i++)
                 {
@@ -224,8 +228,6 @@ namespace Lab2_VM
 
             return true;
         }
-
-
 
         class IncorrectMatrixException : Exception
         {

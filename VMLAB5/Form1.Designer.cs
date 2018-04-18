@@ -41,6 +41,9 @@
             this.resultDataGridView = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.matrixDataGridView = new System.Windows.Forms.DataGridView();
+            this.IsButton = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.IsTextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.matrixDataGridView)).BeginInit();
@@ -162,11 +165,40 @@
             this.matrixDataGridView.Size = new System.Drawing.Size(348, 237);
             this.matrixDataGridView.TabIndex = 13;
             // 
+            // IsButton
+            // 
+            this.IsButton.Location = new System.Drawing.Point(607, 99);
+            this.IsButton.Name = "IsButton";
+            this.IsButton.Size = new System.Drawing.Size(181, 23);
+            this.IsButton.TabIndex = 14;
+            this.IsButton.Text = "Проверить сходимость";
+            this.IsButton.UseVisualStyleBackColor = true;
+            this.IsButton.Click += new System.EventHandler(this.IsButton_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(184, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Сходимость: ";
+            // 
+            // IsTextBox
+            // 
+            this.IsTextBox.Location = new System.Drawing.Point(264, 31);
+            this.IsTextBox.Name = "IsTextBox";
+            this.IsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.IsTextBox.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 620);
+            this.Controls.Add(this.IsTextBox);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.IsButton);
             this.Controls.Add(this.matrixDataGridView);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.resultDataGridView);
@@ -205,6 +237,9 @@
         private System.Windows.Forms.DataGridView resultDataGridView;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView matrixDataGridView;
+        private System.Windows.Forms.Button IsButton;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox IsTextBox;
     }
 }
 

@@ -81,8 +81,6 @@ namespace VMLAB5
             var strCount = matrix.GetLength(0);
             var columnCount = matrix.GetLength(1);
 
-            //if (strCount + 1 != columnCount) return false;
-
             for (int i = 0; i < strCount; i++)
             {
                 if (matrix[i, i] != 0)

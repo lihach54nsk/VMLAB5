@@ -9,7 +9,6 @@ namespace Lab2_VM
 {
     public static class MatrixMath
     {
-
         /// <summary>
         /// Вычисляет значения корней СЛАУ по методу Гаусса
         /// </summary>

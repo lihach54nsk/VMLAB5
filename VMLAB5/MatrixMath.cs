@@ -50,7 +50,7 @@ namespace Lab2_VM
 
                 for (var j = i + 1; j < strCount; j++)
                 {
-                    var koeff = -(outMatrix[j, i] / outMatrix[i, i]);
+                    var koeff = -(outMatrix[j, i] / outMatrix[i, i]);///////////////////////////
                     StringSum(outMatrix, i, j, koeff);
                 }
 
@@ -139,7 +139,6 @@ namespace Lab2_VM
         {
             var strCount = matrix.GetLength(0);
             var columnCount = matrix.GetLength(1);
-
 
             if (strCount + 1 != columnCount) throw new IncorrectMatrixException();
 

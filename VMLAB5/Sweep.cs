@@ -13,16 +13,11 @@ namespace Lab2_VM
         {
             int N1 = N - 1;
 
-            //decimal[,] matrixA = new decimal[N, N];
-            //decimal[] matrixB = new decimal[N];
             decimal y = 0;
             decimal[] A = new decimal[N];
             decimal[] B = new decimal[N];
 
             decimal[] matrixRes = new decimal[N];
-
-            //matrixA = matrixa;
-           // matrixB = matrixb;
 
             y = matrixA[0, 0];
             A[0] = -matrixA[0, 1] / y;
